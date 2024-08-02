@@ -54,6 +54,26 @@
             height: auto; 
         }
         
+        .row {
+            margin-top: 20px;
+        }
+        .text_video {
+            flex: 1;
+            text-align: right;
+            font-size: 0.9em;
+            color: #7d7d7d;
+            margin-right: 5px; /* 调整文字和第一个视频之间的间距 */
+        }
+        .video {
+            flex: 1;
+            /* text-align: left; */
+            margin: 0 0px; /* 调整两个视频之间的间距 */
+        }
+        .video video {
+            width: 70%; /* 调整为你需要的百分比 */
+            height: auto; /* 保持视频的宽高比 */
+        }
+        
     </style>
 
 </head>
@@ -90,15 +110,70 @@
         </div>
 
         <div class="row">
+            <section class="text_video">
+                <p> Generated videos, dynamics score: 5.4, 5.5. <br> The video content is mostly static. </p>
+            </section>
             <section class="video">
                 <video controls>
-                    <source src="path_to_your_video1.mp4" type="video/mp4">
+                    <source src="./videos/5.40_st2v_urban_medium_0012.mp4" type="video/mp4">
+                </video>
+            </section>
+            <section class="video">
+                <video controls>
+                    <source src="./videos/5.50_st2v_car_static_0012.mp4" type="video/mp4">
+                </video>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="text_video">
+                <p> Generated videos, dynamics score: 7.0, 7.2. <br> The video features a single type of movement, lighting change, or morphological change. </p>
+            </section>
+            <section class="video">
+                <video controls>
+                    <source src="./videos/7.03_st2v_zebra_high_0004.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </section>
             <section class="video">
                 <video controls>
-                    <source src="path_to_your_video2.mp4" type="video/mp4">
+                    <source src="./videos/7.15_st2v_natural_static_0015.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="text_video">
+                <p> Generated videos, dynamics score: 9.0, 9.0. The video includes various types of movements and morphological changes, as well as diverse patterns of change.<br> </p>
+            </section>
+            <section class="video">
+                <video controls>
+                    <source src="./videos/9.01_st2v_giraffe_high_0000.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+            <section class="video">
+                <video controls>
+                    <source src="./videos/9.03_st2v_cow_high_0005.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="text_video">
+                <p> Generated videos, dynamics score: 11.0, 11.0. <br> The video either contains intense movements and morphological changes or features a wide range of change patterns. </p>
+            </section>
+            <section class="video">
+                <video controls>
+                    <source src="./videos/11.00_st2v_cat_medium_0002.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+            <section class="video">
+                <video controls>
+                    <source src="./videos/11.01_st2v_bird_medium_0002.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </section>
