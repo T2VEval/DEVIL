@@ -35,38 +35,60 @@
             color: #737373;
         }
 
+        .text_abstract {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .text_dscore {
+            margin-top: 20px;
+            text-align: left;
+        }
+        
+        .figure_dscore {
+            text-align: center;
+        }
+        .figure_dscore img {
+            margin-top: 50px;
+            width: 60%;
+            height: auto; 
+        }
+        
     </style>
 
 </head>
 <body>
     <div class="container">
+        
         <header class="title">
-            <h1>DEVIL: Evaluation of Text-to-Video Generation Models: A Dynamics Perspective</h1>
+            <h1>DEVIL: Evaluation of Text-to-Video Generation Models: <br> A Dynamics Perspective</h1>
             <p class="subtitle">Anonymous Submission</p>
         </header>
+
         <section class="figure_1">
             <img src="figures/Fig2_wu_1.png" alt="Figure">
             <figcaption>Figure 1. Flowchart to calculate dynamics metrics based on dynamics scores and text prompts.</figcaption>
         </section>
-        <section class="text">
-            <p>This section contains the main text content describing the figure and other details.</p>
+        
+        <section class="text_abstract">
+            <p><strong class="abstract-title">Abstract:</strong> <span class="abstract-content">Comprehensive and constructive evaluation protocols play an important role when developing sophisticated text-to-video (T2V) generation models. 
+                Existing evaluation protocols primarily focus on temporal consistency and content continuity, yet largely ignore dynamics of video content. 
+                Such dynamics is an essential dimension measuring the visual vividness and the honesty of video content to text prompts. 
+                In this study, we propose an effective evaluation protocol, termed DEVIL, which centers on the dynamics dimension to evaluate T2V generation models, as well as improving existing evaluation metrics. In practice, we define a set of dynamics scores corresponding to multiple temporal granularities, and a new benchmark of text prompts under multiple dynamics grades. Upon the text prompt benchmark, we assess the generation capacity of T2V models, characterized by metrics of dynamics ranges and T2V alignment. Moreover, we analyze the relevance of existing metrics to dynamics metrics, improving them from the perspective of dynamics. Experiments show that DEVIL evaluation metrics enjoy up to about 90% consistency with human ratings, demonstrating the potential to advance T2V generation models.
+                </span></p>
+        </section>
+        
+        <section class="figure_dscore">
+            <img src="figures/dynamic_score_2.png" alt="Figure">
+            <!-- <figcaption>Figure 1. Flowchart to calculate dynamics metrics based on dynamics scores and text prompts.</figcaption> -->
         </section>
         <div class="row">
-            <section class="text">
-                <p>This is additional text content explaining further details about the project.</p>
-            </section>
-            <section class="figure">
-                <img src="path_to_your_second_figure.jpg" alt="Figure">
+            <section class="text_dscore">
+                <p><strong class="abstract-title">Dynamics score:</strong> By altering the temporal granularities, video dynamics can be categorized into three: (i) Inter-frame dynamics, which describes the variations between successive frames. The dynamics score at this level reflects rapid and prominent content variations. (ii) Inter-segment dynamics, which refers to the changes between video segments which contains K video frames. Define on a middle-level, this score captures middle-speed transitions and motion patterns. (iii) Video-level dynamics, which encompasses the overall content diversity and the frequency of changes throughout the video.
+                </p>
             </section>
         </div>
-        <div class="row">
-            <section class="text">
-                <p>More text content for elaboration and explanation.</p>
-            </section>
-            <section class="figure">
-                <img src="path_to_your_third_figure.jpg" alt="Figure">
-            </section>
-        </div>
+
         <div class="row">
             <section class="video">
                 <video controls>
