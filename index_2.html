@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video and Text Display</title>
+    <style>
+        .row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .text_video {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .videos {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .video {
+            max-width: 45%;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+
+        <div class="videos">
+            <section class="video">
+                <video controls>
+                    <source src="./videos/11.72_st2v_indoor_high_0000.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+            <section class="video">
+                <video controls>
+                    <source src="./videos/11.01_st2v_bird_medium_0002.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+        </div>
+        
+        <section class="text_video">
+            <h2>Dynamics score: 0.656, 0.648</h2>
+            <p> The video either contains intense movements and morphological changes or features a wide range of change patterns. </p>
+        </section>
+    </div>
+</body>
+</html>
