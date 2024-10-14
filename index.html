@@ -12,9 +12,13 @@
             text-align: center;
         }
 
+        .title a {
+            text-decoration: none;
+        }
+
         .subtitle {
             text-align: center;
-            font-size: 1.2em;
+            font-size: 1.4em;
             color: #666;
             margin-top: 10px;
         }
@@ -31,7 +35,24 @@
 
         .figure_1 figcaption {
             margin-top: 10px;
-            font-size: 0.9em;
+            font-size: 1.2em;
+            color: #737373;
+        }
+
+
+        .figure_board {
+            text-align: center;
+        }
+
+        .figure_board img {
+            margin-top: 40px;
+            width: 60%;
+            height: auto; 
+        }
+
+        .figure_board figcaption {
+            margin-top: 10px;
+            font-size: 1.2em;
             color: #737373;
         }
 
@@ -46,13 +67,13 @@
             text-align: justify;
         }
         .text_abstract h2 {
-            font-size: 2em;
+            font-size: 2.2em;
             color: #333;
             margin-bottom: 10px;
             text-align: center;
         }
         .abstract-content {
-            font-size: 1.0em;
+            font-size: 1.2em;
             color: #666;
             line-height: 1.5;
             text-align: justify;
@@ -70,7 +91,7 @@
         }
         .figure_dscore figcaption {
             margin-top: 10px;
-            font-size: 0.9em;
+            font-size: 1.2em;
             color: #737373;
         }
         
@@ -105,6 +126,31 @@
             height: auto; /* 保持视频的宽高比 */
         }
         
+        .bibtex-container {
+            background: #f5f5f5; /* 浅灰色背景 */
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px; /* 圆角 */
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+            font-family: "Courier New", Courier, monospace; /* 采用等宽字体 */
+            font-size: 1.4em; /* 调大的字体大小 */
+        }
+
+        .bibtex-title {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 15px;
+        }
+
+        .separator {
+            border-top: 3px solid #d3d3d3; /* 灰色的横线 */
+            margin: 40px auto; /* 与上下文的距离 */
+            width: 100%; /* 与内容的宽度保持一致 */
+        }
+
     </style>
 
 </head>
@@ -113,27 +159,66 @@
         
         <header class="title">
             <h1>DEVIL: Evaluation of Text-to-Video Generation Models: <br> A Dynamics Perspective</h1>
-            <p class="subtitle">Anonymous Submission</p>
+            <!-- <p class="subtitle">Anonymous Submission</p> -->
+            <p class="subtitle">
+                <a href=""><span>Mingxiang Liao</span></a><sup>1*</sup>, 
+                <a href=""><span>Hannan Lu</span></a><sup>2*</sup>, 
+                <a href=""><span>Xinyu Zhang</span></a><sup>3,4*</sup>, 
+                <a href=""><span>Fang Wan</span></a><sup>1</sup>, 
+                <a href=""><span>Tianyu Wang</span></a><sup>1</sup>, 
+                <a href=""><span>Yuzhong Zhao</span></a><sup>1</sup>, 
+                <a href=""><span>Wangmeng Zuo</span></a><sup>2</sup>, 
+                <a href=""><span>Qixiang Ye</span></a><sup>1</sup>, 
+                <a href=""><span>Jingdong Wang</span></a><sup>4</sup><br>
+                <sup>1</sup>University of Chinese Academy of Sciences, 
+                <sup>2</sup>Harbin Institute of Technology, <br>
+                <sup>3</sup>The University of Adelaide, 
+                <sup>4</sup>Baidu Inc.
+            </p>
+
+            <p class="conference-info" style="margin-top: 20px; text-align: center; font-size: 1.7em;">
+                Neurips 2024
+            </p>
+        
+            <p class="equal-contribution" style="text-align: center; font-size: 1em; color: #666;">
+                *Indicates Equal Contribution
+            </p>
+
+            <p class="links" style="text-align: center; margin-top: 20px; font-size: 1.9em;">
+                <a href="https://arxiv.org/abs/2407.01094" style="margin-right: 20px;">
+                    <span>ArXiv</span>
+                </a>
+                <a href="https://github.com/MingXiangL/DEVIL">
+                    <span>GitHub</span>
+                </a>
+            </p>
+
         </header>
 
         <section class="figure_1">
-            <img src="figures/Fig2_wu_1.png" alt="Figure">
+            <img src="figures/fig_flowchart.png" alt="Figure">
             <figcaption>Figure 1. Flowchart to calculate dynamics metrics based on dynamics scores and text prompts.</figcaption>
         </section>
         
         <section class="text_abstract">
             <h2>Abstract</h2>
             <p class="abstract-content">
-                Comprehensive and constructive evaluation protocols play an important role when developing sophisticated text-to-video (T2V) generation models. 
+                <!-- Comprehensive and constructive evaluation protocols play an important role when developing sophisticated text-to-video (T2V) generation models. 
                 Existing evaluation protocols primarily focus on temporal consistency and content continuity, yet largely ignore dynamics of video content. 
                 Such dynamics is an essential dimension measuring the visual vividness and the honesty of video content to text prompts. 
-                In this study, we propose an effective evaluation protocol, termed DEVIL, which centers on the dynamics dimension to evaluate T2V generation models, as well as improving existing evaluation metrics. In practice, we define a set of dynamics scores corresponding to multiple temporal granularities, and a new benchmark of text prompts under multiple dynamics grades. Upon the text prompt benchmark, we assess the generation capacity of T2V models, characterized by metrics of dynamics ranges and T2V alignment. Moreover, we analyze the relevance of existing metrics to dynamics metrics, improving them from the perspective of dynamics. Experiments show that DEVIL evaluation metrics enjoy up to about 90% consistency with human ratings, demonstrating the potential to advance T2V generation models.
+                In this study, we propose an effective evaluation protocol, termed DEVIL, which centers on the dynamics dimension to evaluate T2V generation models, as well as improving existing evaluation metrics. In practice, we define a set of dynamics scores corresponding to multiple temporal granularities, and a new benchmark of text prompts under multiple dynamics grades. Upon the text prompt benchmark, we assess the generation capacity of T2V models, characterized by metrics of dynamics ranges and T2V alignment. Moreover, we analyze the relevance of existing metrics to dynamics metrics, improving them from the perspective of dynamics. Experiments show that DEVIL evaluation metrics enjoy up to about 90% consistency with human ratings, demonstrating the potential to advance T2V generation models. -->
+                Comprehensive and constructive evaluation protocols play an important role in the development of sophisticated text-to-video (T2V) generation models. Existing evaluation protocols primarily focus on temporal consistency and content continuity, yet largely ignoring the dynamics of video content. Dynamics are an essential dimension for measuring the visual vividness and the honesty of video content to text prompts. In this study, we propose an effective evaluation protocol, termed DEVIL, which centers on the dynamics dimension to evaluate T2V models. For this purpose, we establish a new benchmark comprising text prompts that fully reflect multiple dynamics grades, and define a set of dynamics scores corresponding to various temporal granularities to comprehensively evaluate the dynamics of each generated video. Based on the new benchmark and the dynamics scores, we assess T2V models with the design of three metrics: dynamics range, dynamics controllability, and dynamics-based quality. Experiments show that DEVIL achieves a Pearson correlation exceeding 90% with human ratings, demonstrating its potential to advance T2V generation models. 
             </p>
+        </section>
+
+        <section class="figure_board">
+            <img src="figures/board.png" alt="Figure">
+            <figcaption> Figure 2. Leaderboard, still updating.</figcaption>
         </section>
         
         <section class="figure_dscore">
             <img src="figures/dynamic_score_2.png" alt="Figure">
-            <figcaption> Figure 2. Illustration of dynamics at multiple temporal granularities, and video quality distribution w.r.t. dynamic scores.</figcaption>
+            <figcaption> Figure 3. Illustration of dynamics at multiple temporal granularities, and video quality distribution w.r.t. dynamic scores.</figcaption>
         </section>
 
         <section class="text_abstract">
@@ -339,6 +424,29 @@
                 </video>
             </section>
         </div>
+
+    <div class="separator"></div>
+    <section class="bibtex">
+        <div class="bibtex-title">BibTeX</div>
+        <div class="bibtex-container">
+            <!-- <pre>
+                @article{liao2024evaluation,
+                title={Evaluation of text-to-video generation models: A dynamics perspective},
+                author={Liao, Mingxiang and Lu, Hannan and Zhang, Xinyu and Wan, Fang and Wang, Tianyu and Zhao, Yuzhong and 
+                    Zuo, Wangmeng and Ye, Qixiang and Wang, Jingdong},
+                journal={arXiv preprint arXiv:2407.01094},
+                year={2024}}
+            </pre> -->
+            <p style="font-size: 0.8em;">
+                @article{liao2024evaluation,<br>
+                title={Evaluation of text-to-video generation models: A dynamics perspective},<br>
+                author={Liao, Mingxiang and Lu, Hannan and Zhang, Xinyu and Wan, Fang and Wang, Tianyu and Zhao, Yuzhong and <br>
+                    Zuo, Wangmeng and Ye, Qixiang and Wang, Jingdong},<br>
+                journal={arXiv preprint arXiv:2407.01094},<br>
+                year={2024}}<br>
+            </p>
+        </div>
+    </section>
 
     </div>
 </body>
